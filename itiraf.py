@@ -41,7 +41,7 @@ async def start(event):
                        Button.inline("💌 Söz Paylaş", data="etiraf")
                       ],
                       [Button.url('📜 Söz Kanalımız', f'https://t.me/{kanal}')],
-                      [Button.url('💬 Sohbet Kanalımız', f'https://t.me/{support}'),
+                      [Button.url('💬 Sohbet Kanalı', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
@@ -60,7 +60,7 @@ async def handler(event):
                        Button.inline("💌 Söz Paylaş", data="etiraf")
                       ],
                       [Button.url('📜 Söz Kanalımız', f'https://t.me/{kanal}')],
-                      [Button.url('💬 Sohbet Kanalımız', f'https://t.me/{support}'),
+                      [Button.url('💬 Sohbet Kanalı', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
