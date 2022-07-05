@@ -125,6 +125,7 @@ async def aciq(event):
     global mesaj
     global tesdiq
     async for usr in client.iter_participants(event.chat_id):
+     gonderen = f"[{usr.first_name}](tg://user?id={usr.id})"
      etiraf_eden = f"[{usr.first_name}](tg://user?id={usr.id})"
      sonluq = f"\n💌 Sözleri {botad} -a gönderin, bu kanalda paylaşılsın."
      yeni_etiraf = await client.send_message(admin_qrup, f"{mesaj}\n\n**Tarafından Paylaşıldı:** {etiraf_eden}\n{sonluq}")
