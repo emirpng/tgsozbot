@@ -35,7 +35,7 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      isim = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await client.send_message(log_qrup, f"👤 **Yeni Kullanıcı -** {isim}")
+     await client.send_message(log_qrup, f"🙂 **Yeni Kullanıcı -** {isim}")
      return await event.reply(f"{isim} {startmesaj}", buttons=(
                       [
                        Button.inline("💌 Söz Paylaş", data="etiraf")
@@ -101,7 +101,7 @@ async def anonim(event):
     async for usr in client.iter_participants(event.chat_id):
      gonderen = f"[{usr.first_name}](tg://user?id={usr.id})"
      etiraf_eden = "Anonim"
-     yeni_etiraf = await client.send_message(admin_qrup, f"📣 **Yeni İtiraf**\n\n🗣️ **İtiraf Eden -** {etiraf_eden} \n📜 **İtirafı -** {mesaj} \n\n📣 İtirafınızı {botad} -a edin")
+     yeni_etiraf = await client.send_message(admin_qrup, f"{mesaj}\n\n**Tarafından Paylaşıldı:** {etiraf_eden}\n{sonluq}")
      tesdiq = await yeni_etiraf.reply(f"ℹ️ {gonderen} Bir söz gönderdi. Onaylansın mı?", buttons=(
                       [
                        Button.inline("✅ Onayla", data="tesdiq"
