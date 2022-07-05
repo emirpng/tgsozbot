@@ -101,6 +101,7 @@ async def anonim(event):
     async for usr in client.iter_participants(event.chat_id):
      gonderen = f"[{usr.first_name}](tg://user?id={usr.id})"
      etiraf_eden = "Anonim"
+     sonluq = f"\n💌 Söz paylaşımızı {botad} -a gönderin, bu kanalda paylaşılsın. 😊"
      yeni_etiraf = await client.send_message(admin_qrup, f"{mesaj}\n\n**Tarafından Paylaşıldı:** {etiraf_eden}\n{sonluq}")
      tesdiq = await yeni_etiraf.reply(f"ℹ️ {gonderen} Bir söz gönderdi. Onaylansın mı?", buttons=(
                       [
