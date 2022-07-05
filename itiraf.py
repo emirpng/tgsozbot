@@ -112,7 +112,7 @@ async def anonim(event):
                     link_preview=False)
     await event.edit(f"{gonderildi}", buttons=(
                       [
-                       Button.inline("💬 Yeni Söz", data="etiraf"),
+                       Button.inline("💌 Yeni Söz", data="etiraf"),
                        Button.inline("🏠 Ana Sayfa", data="start")
                       ]
                     ),
@@ -128,7 +128,7 @@ async def aciq(event):
      etiraf_eden = f"[{usr.first_name}](tg://user?id={usr.id})"
      sonluq = f"\n💌 İtirafınızı {botad} -a edin"
      yeni_etiraf = await client.send_message(admin_qrup, f"📣 **Yeni İtiraf**\n\n🗣️ **İtiraf Eden -** {etiraf_eden} \n📜 **İtirafı -** {mesaj} \n{sonluq}")
-     tesdiq = await yeni_etiraf.reply("İtirafın Onaylanması ?", buttons=(
+     tesdiq = await yeni_etiraf.reply(f"ℹ️ {gonderen} Bir söz gönderdi. Onaylansın mı?", buttons=(
                       [
                        Button.inline("✅ Onayla", data="tesdiq"
                        ),
@@ -136,7 +136,6 @@ async def aciq(event):
                       ]
                     ),
                     link_preview=False)
-    await client.send_message(log_qrup, f"ℹ️ {etiraf_eden} __Açık Söz Yazdı__")
     await event.edit(f"{gonderildi}", buttons=(
                       [
                        Button.inline("💌 Yeni Söz", data="etiraf"),
