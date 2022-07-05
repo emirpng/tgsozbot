@@ -38,10 +38,10 @@ async def start(event):
      await client.send_message(log_qrup, f"👤 **Yeni Kullanıcı -** {isim}")
      return await event.reply(f"{isim} {startmesaj}", buttons=(
                       [
-                       Button.inline("💬 Söz Paylaş", data="etiraf")
+                       Button.inline("💌 Söz Paylaş", data="etiraf")
                       ],
                       [Button.url('📜 Söz Kanalımız', f'https://t.me/{kanal}')],
-                      [Button.url('📣 Sohbet Kanalımız', f'https://t.me/{support}'),
+                      [Button.url('💬 Sohbet Kanalımız', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
@@ -57,10 +57,10 @@ async def handler(event):
      isim = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{isim} {startmesaj}", buttons=(
                       [
-                       Button.inline("💬 Söz Gönder", data="etiraf")
+                       Button.inline("💌 Söz Paylaş", data="etiraf")
                       ],
                       [Button.url('📜 Söz Kanalımız', f'https://t.me/{kanal}')],
-                      [Button.url('📣 Sohbet Kanalımız', f'https://t.me/{support}'),
+                      [Button.url('💬 Sohbet Kanalımız', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
@@ -126,8 +126,8 @@ async def aciq(event):
     global tesdiq
     async for usr in client.iter_participants(event.chat_id):
      etiraf_eden = f"[{usr.first_name}](tg://user?id={usr.id})"
-     sonluq = f"\n💌 İtirafınızı {botad} -a edin"
-     yeni_etiraf = await client.send_message(admin_qrup, f"📣 **Yeni İtiraf**\n\n🗣️ **İtiraf Eden -** {etiraf_eden} \n📜 **İtirafı -** {mesaj} \n{sonluq}")
+     sonluq = f"\n💌 Sözleri {botad} -a gönderin, bu kanalda paylaşılsın."
+     yeni_etiraf = await client.send_message(admin_qrup, f"{mesaj}\n\n**Tarafından Paylaşıldı:** {etiraf_eden}\n{sonluq}")
      tesdiq = await yeni_etiraf.reply(f"ℹ️ {gonderen} Bir söz gönderdi. Onaylansın mı?", buttons=(
                       [
                        Button.inline("✅ Onayla", data="tesdiq"
